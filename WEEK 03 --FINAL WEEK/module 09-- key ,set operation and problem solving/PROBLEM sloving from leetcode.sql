@@ -1,5 +1,6 @@
 -- problem 01
-/*
+
+/* #########################################################
 Table: Person
 
 +-------------+---------+
@@ -38,15 +39,19 @@ Output:
 | a@b.com |
 +---------+
 Explanation: a@b.com is repeated two times.
-*/
+#########################################################*/
 -- soluation is code is below
 select email 
 from person
 group by email
 having count(email)>1;
 
+
+
+
 -- problem 02
-/*
+
+/*#########################################################
 Table: Employee
 
 +-------------+---------+
@@ -88,14 +93,18 @@ Output:
 | Joe      |
 +----------+
 Explanation: Joe is the only employee who earns more than his manager.
-*/
--- soluation is code is below
+#########################################################*/
+-- soluation code is below
 select EMP.NAME AS EMPLOYEE
 FROM EMPLOYEE AS EMP,EMPLOYEE AS MGR
 WHERE EMP.MANAGERID=MGR.ID AND EMP.SALARY>MGR.SALARY;
 
+
+
+
 -- PROBLEM 3
-/*
+
+/*#########################################################
 Table: Customers
 
 +-------------+---------+
@@ -155,7 +164,7 @@ Output:
 | Henry     |
 | Max       |
 +-----------+
-*/
+#########################################################*/
 -- soluation code is below
 SELECT CUSTOMERS.NAME AS CUSTOMERS
 FROM CUSTOMERS 
